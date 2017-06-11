@@ -12,113 +12,67 @@
 		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
 		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
-		<link rel="stylesheet" type="text/css" href="css/hotel-comment.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hotel-comment.css" />
 	</head>
-
 	<body>
-
-		<style>
-		</style>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title" style="color: #007AFF;">酒店评价</h1>
 		</header>
-		<div class="mui-content">
-			<div id="slider" class="mui-slider">
-				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-					<a class="mui-control-item" href="#item1mobile">
-				待办公文
-			</a>
-					<a class="mui-control-item" href="#item2mobile">
-				已办公文
-			</a>
-					<a class="mui-control-item" href="#item3mobile">
-				全部公文
-			</a>
+		<div class="mui-slider">
+			<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<a class="mui-control-item mui-active" href="#item1mobile">全部</a>
+				<a class="mui-control-item" href="#item2mobile">推荐</a>
+				<a class="mui-control-item" href="#item3mobile">不推荐</a>
+			</div>
+			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div class="hotel-bar-rate">
+						<span class="hotel-rate">
+							4.8分
+							<p class='mui-ellipsis hotel-rate-in-1'>
+								95%推荐
+							</p>
+						</span>
+						<span class="hotel-rate-type">
+							<div id="demo1" class="mui-progressbar">
+								<span></span>
+							</div>
+						</span>
+						
+					</div>
 				</div>
-				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
-				<div class="mui-slider-group">
-					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
-						<div class="mui-media-body hotel-comment">
-							<div class="hotel-bar-rate">
-								<span class="hotel-color-gray hotel-rate">
-									4.8分
-									<p class='mui-ellipsis hotel-in-1'>95%推荐</p>
-								</span>
-								<span class="hotel-rate-type">
-									<span class="mui-progressbar mui-progressbar-success" data-progress="80"><span></span></span>
-								</span>
-							</div>
-						</div>
-					</div>
-					<div id="item2mobile" class="mui-slider-item mui-control-content">
-						<div id="scroll2" class="mui-scroll-wrapper">
-							<div class="mui-scroll">
-								<div class="mui-loading">
-									<div class="mui-spinner">
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<div id="item3mobile" class="mui-slider-item mui-control-content">
-						<div id="scroll3" class="mui-scroll-wrapper">
-							<div class="mui-scroll">
-								<div class="mui-loading">
-									<div class="mui-spinner">
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">第2个选项卡子项</li>
+						<li class="mui-table-view-cell">第2个选项卡子项</li>
+					</ul>
+				</div>
+				<div id="item3mobile" class="mui-slider-item mui-control-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">第3个选项卡子项</li>
+						<li class="mui-table-view-cell">第3个选项卡子项</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-		<script src="js/mui.min.js"></script>
-		<script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
 			mui.init({
 				swipeBack: false
 			});
 			(function($) {
-				$('.mui-scroll-wrapper').scroll({
-					indicators: true //是否显示滚动条
-				});
-				var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
-				var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
-				var item2 = document.getElementById('item2mobile');
-				var item3 = document.getElementById('item3mobile');
-				document.getElementById('slider').addEventListener('slide', function(e) {
-					if (e.detail.slideNumber === 1) {
-						if (item2.querySelector('.mui-loading')) {
-							setTimeout(function() {
-								item2.querySelector('.mui-scroll').innerHTML = html2;
-							}, 500);
-						}
-					} else if (e.detail.slideNumber === 2) {
-						if (item3.querySelector('.mui-loading')) {
-							setTimeout(function() {
-								item3.querySelector('.mui-scroll').innerHTML = html3;
-							}, 500);
-						}
-					}
-				});
 				var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
 				$('.mui-input-group').on('change', 'input', function() {
-					if (this.checked) {
+					if(this.checked) {
 						sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
-						//force repaint
 						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
 					}
 				});
 			})(mui);
-			//自定义颜色示例
-			mui(".mui-progressbar").each(function () {
-				mui(this).progressbar({progress:this.getAttribute("data-progress")}).show();
-			});
+			mui("#demo1").progressbar({progress:80}).show();
 		</script>
-
 	</body>
 
 </html>
