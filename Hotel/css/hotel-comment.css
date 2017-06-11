@@ -1,0 +1,18 @@
+.mui-media-body span{
+	display: inline-block;
+	float: left;
+}
+.hotel-comment .mui-ellipsis.hotel-in-1 {
+	font-size: 12px;
+}
+.hotel-bar-rate{
+	position: relative;
+	top: 5px;
+	background-color: white;
+}
+.hotel-rate{
+	width: 80px;
+	height: 40px;
+	text-align: center;
+	border-right:1px solid #EFEFF4;
+}

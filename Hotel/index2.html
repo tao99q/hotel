@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav mui-bar-transparent">
+			<a href="" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">酒店列表</h1>
+		</header>
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left hotel-img" src="img/room1.jpg">
+							<div class="mui-media-body">
+								北京钓鱼台国宾馆
+								<p class='mui-ellipsis'>
+									<span class="hotel-color-blue">98</span>
+									<i class="fa fa-wifi"></i>
+									<span class="hotel-price hotel-color-orange">￥1500</span>
+								</p>
+								<p class='mui-ellipsis'>
+									高档酒店
+									<i class="fa fa-gift hotel-text-right"></i>
+								</p>
+								<p class='mui-ellipsis'>
+									公主坟，五棵松，石景山游乐园
+									<span class="hotel-away">1公里</span>
+								</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left hotel-img" src="img/room2.jpg">
+							<div class="mui-media-body">
+								北京钓鱼台国宾馆
+								<p class='mui-ellipsis'>
+									<span class="hotel-color-blue">98</span>
+									<i class="fa fa-wifi"></i>
+									<span class="hotel-price hotel-color-orange">￥1500</span>
+								</p>
+								<p class='mui-ellipsis'>
+									高档酒店
+									<i class="fa fa-gift hotel-text-right"></i>
+								</p>
+								<p class='mui-ellipsis'>
+									公主坟，五棵松，石景山游乐园
+									<span class="hotel-away">1公里</span>
+								</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left hotel-img" src="img/room3.jpg">
+							<div class="mui-media-body">
+								北京钓鱼台国宾馆
+								<p class='mui-ellipsis'>
+									<span class="hotel-color-blue">98</span>
+									<i class="fa fa-wifi"></i>
+									<span class="hotel-price hotel-color-orange">￥1500</span>
+								</p>
+								<p class='mui-ellipsis'>
+									高档酒店
+									<i class="fa fa-gift hotel-text-right"></i>
+								</p>
+								<p class='mui-ellipsis'>
+									公主坟，五棵松，石景山游乐园
+									<span class="hotel-away">1公里</span>
+								</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left hotel-img" src="img/room4.png">
+							<div class="mui-media-body">
+								北京钓鱼台国宾馆
+								<p class='mui-ellipsis'>
+									<span class="hotel-color-blue">98</span>
+									<i class="fa fa-wifi"></i>
+									<span class="hotel-price hotel-color-orange">￥1500</span>
+								</p>
+								<p class='mui-ellipsis'>
+									高档酒店
+									<i class="fa fa-gift hotel-text-right"></i>
+								</p>
+								<p class='mui-ellipsis'>
+									公主坟，五棵松，石景山游乐园
+									<span class="hotel-away">1公里</span>
+								</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left hotel-img" src="img/room5.jpg">
+							<div class="mui-media-body">
+								北京钓鱼台国宾馆
+								<p class='mui-ellipsis'>
+									<span class="hotel-color-blue">98</span>
+									<i class="fa fa-wifi"></i>
+									<span class="hotel-price hotel-color-orange">￥1500</span>
+								</p>
+								<p class='mui-ellipsis'>
+									高档酒店
+									<i class="fa fa-gift hotel-text-right"></i>
+								</p>
+								<p class='mui-ellipsis'>
+									公主坟，五棵松，石景山游乐园
+									<span class="hotel-away">1公里</span>
+								</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			mui.init({
+				subpages: [{
+					url: "index.html", //下拉刷新内容页面地址
+					id: "refreshContainer", //内容页面标志
+					styles: {
+						top: 48 //内容页面顶部位置,需根据实际页面布局计算，若使用标准mui导航，顶部默认为48px；
+					}
+				}],
+				pullRefresh: {
+					container: "#refreshContainer", //下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+					down: {
+						height: 50, //可选,默认50.触发下拉刷新拖动距离,
+						auto: true, //可选,默认false.自动下拉刷新一次
+						contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+						contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+						contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+						callback: getData //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					}
+				}
+			});
+
+			function getData() {
+				//第一步是ajax请求部分
+				ajax("get", "json/data.json");
+				//下拉结束后,所有的东西完成之后必须执行的操作
+				mui("#refreshContainer").pullRefresh().endPulldownToRefresh();
+			}
+
+			function ajax(type, url) {
+				var xhr = new XMLHttpRequest();
+				xhr.open(type, url, false);
+				xhr.onreadystatechange = function() {
+					if(xhr.readyState == 4 && xhr.status == 200) {
+						var jsonData = JSON.parse(xhr.responseText);
+						var frag = document.createDocumentFragment();
+						for(var i = 0, len = jsonData.length; i < len; i++) {
+							var oLi = document.getElementById("refreshContainer").getElementsByTagName("li")[0].cloneNode(true);
+							oLi.getElementsByClassName("hotel-img")[0].src = jsonData[i]["img"];
+							oLi.getElementsByClassName("mui-media-body")[0].childNodes[0]["nodeValue"] = jsonData[i]["name"];
+							oLi.getElementsByTagName("span")[0].innerHTML = jsonData[i]["rate"];
+							oLi.getElementsByClassName("hotel-price")[0].innerHTML = jsonData[i]["price"];
+							oLi.getElementsByClassName("mui-media-body")[0].getElementsByTagName("p")[1].innerHTML = jsonData[i]["type"] + '<i class="fa fa-gift hotel-text-right"></i>'
+							oLi.getElementsByClassName("mui-media-body")[0].getElementsByTagName("p")[2].innerHTML = jsonData[i]["nearby"] + '<span class="hotel-away">' + jsonData[i]["away"] + '</span>';
+							frag.appendChild(oLi);
+						}
+						mui(".mui-table-view")[0].insertBefore(frag,mui(".mui-table-view")[0].firstChild);
+					}
+				}
+				xhr.send(null);
+			}
+		</script>
+	</body>
+
+</html>
