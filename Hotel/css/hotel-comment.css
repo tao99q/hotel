@@ -1,56 +1,116 @@
+.hotel-commnet{
+	position: relative;
+}
 .hotel-commnet .mui-segmented-control {
 	background-color: white;
 	border: none;
 }
 
 .hotel-commnet .mui-segmented-control .mui-control-item {
-	color: #6D6D72;
+	color: #099FDE;
 	border-left: none;
 }
 
 .hotel-commnet .mui-segmented-control .mui-control-item.mui-active {
 	background-color: #fff;
-	color: #007aff;
-	border-bottom: 2px solid #007aff;
+	color: #099FDE;
+	border-bottom: 2px solid #099FDE;
 }
 
 .hotel-bar-rate {
-	margin-top: 20px;
+	top: 20px;
 	position: relative;
 	background-color: #fff;
+	min-height: 60px;
+	max-height: 60px;
 	height: 60px;
 	padding-left: 8px;
 }
 
-.hotel-rate-type,
 .hotel-rate-deail {
-	display: inline-block;
-	float: right;
-}
-
-.hotel-rate-deail {
-	border-right: 1px dashed #ddd;
+	position: relative;
+	float: left;
+	border-right: 1px solid #ddd;
+	width: 60px;
+	height: 60px;
 	text-align: center;
+	padding-top: 8px;
 }
-
+.mui-media-body p{
+	    padding: 2px 0;
+}
 .hotel-rate-type {
 	position: relative;
-	padding-top: 10px;
-	width: 80%;
+
 }
 
 .hotel-rate-type-environment,
 .hotel-rate-type-facilities,
 .hotel-rate-type-hygiene,
 .hotel-rate-type-service {
+	padding: 8px 0 0 8px;
 	display: inline-block;
-	width: 60px;
-	float: right;
+	width: 150px;
+	float: left;
 	font-size: 12px;
-	text-align: center;
+	
 }
 
+.hotel-rate-type-environment span{
+	display: inline-block;
+}
+.hotel-rate-type-facilities span{
+	display: inline-block;
+}
+.hotel-rate-type-hygiene span{
+	display: inline-block;
+}
+.hotel-rate-type-service span{
+	display: inline-block;
+}
 .hotel-rate-type .mui-progressbar {
-	width: 60%;
+	width: 60px;
 	height: 10px;
+	text-align: center;
+}
+.mui-progressbar span {
+	background-color: #099FDE;
+}
+
+.hotel-evaluate-type{
+	position: relative;
+	margin: 40px 9px 0;
+}
+.hotel-evaluate-type div{
+	
+}
+.hotel-evaluate-type li{
+	list-style: none;
+	color: gray;
+	border: 1px solid #DDDDDD;
+	font-size: 12px;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+.hotel-evaluate-type-active{
+	border: 1px solid #DDDDDD;
+	color: gray;
+}
+.hotel-evaluate-list{
+	position: relative;
+	margin: 40px 9px 0;
+	background-color: white;
+}
+.hotel-evaluate-comment{
+	padding-top:2px ;
+	font-size: 12px;
+	padding-top: 8px; padding-left: 8px;
+}
+.evaluate-user{
+	color: #999;
+	font-size: 12px;
+}
+.hotel-evaluate-score{
+	font-size: 18px;
+	font-weight: bold;
 }
