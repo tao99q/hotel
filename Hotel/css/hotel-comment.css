@@ -1,49 +1,56 @@
-.mui-slider{
-	margin-top: 50px;
-}
-.mui-slider-indicator a{
+.hotel-commnet .mui-segmented-control {
 	background-color: white;
-}
-.mui-slider-group {
-	margin-top: 20px;
-}
-.mui-media-body span {
-	display: inline-block;
-	float: left;
+	border: none;
 }
 
-.hotel-comment .mui-ellipsis.hotel-in-1 {
-	font-size: 12px;
+.hotel-commnet .mui-segmented-control .mui-control-item {
+	color: #6D6D72;
+	border-left: none;
+}
+
+.hotel-commnet .mui-segmented-control .mui-control-item.mui-active {
+	background-color: #fff;
+	color: #007aff;
+	border-bottom: 2px solid #007aff;
 }
 
 .hotel-bar-rate {
+	margin-top: 20px;
 	position: relative;
-	/*margin-top: 50px;*/
-	background-color: white;
-	width: 100%;
-	padding: 0 8px;
+	background-color: #fff;
 	height: 60px;
+	padding-left: 8px;
 }
-.hotel-bar-rate span{
+
+.hotel-rate-type,
+.hotel-rate-deail {
 	display: inline-block;
-	float: left;
-	margin-top: 8px;
+	float: right;
 }
-.hotel-rate {
-	width: 80px;
-	height: 40px;
+
+.hotel-rate-deail {
+	border-right: 1px dashed #ddd;
 	text-align: center;
-	font-size: 16px;
-	border-right: 1px solid #EFEFF4;
-	color: #777;
-	font-family: "微软雅黑";
-	font-weight: 300;
 }
-.hotel-rate-in-1{
+
+.hotel-rate-type {
+	position: relative;
+	padding-top: 10px;
+	width: 80%;
+}
+
+.hotel-rate-type-environment,
+.hotel-rate-type-facilities,
+.hotel-rate-type-hygiene,
+.hotel-rate-type-service {
+	display: inline-block;
+	width: 60px;
+	float: right;
 	font-size: 12px;
-}
-.hotel-rate-type{
-	margin-left: 8px;
+	text-align: center;
 }
 
-
+.hotel-rate-type .mui-progressbar {
+	width: 60%;
+	height: 10px;
+}

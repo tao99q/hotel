@@ -5,11 +5,7 @@
 		<meta charset="utf-8">
 		<title>酒店评价</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-
-		<!--标准mui.css-->
 		<link rel="stylesheet" href="css/mui.min.css">
-		<!--App自定义的css-->
-		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
 		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
 		<link rel="stylesheet" type="text/css" href="css/hotel-comment.css" />
@@ -19,59 +15,55 @@
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title" style="color: #007AFF;">酒店评价</h1>
 		</header>
-		<div class="mui-slider">
-			<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-				<a class="mui-control-item mui-active" href="#item1mobile">全部</a>
-				<a class="mui-control-item" href="#item2mobile">推荐</a>
-				<a class="mui-control-item" href="#item3mobile">不推荐</a>
+		<div class="mui-content hotel-commnet">
+			<div class="mui-segmented-control">
+			    <a class="mui-control-item mui-active" href="#item1">全部(5917)</a>
+			    <a class="mui-control-item" href="#item2">推荐(5675)</a>
+			    <a class="mui-control-item" href="#item3">不推荐(242)</a>
 			</div>
-			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
-			<div class="mui-slider-group">
-				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
-					<div class="hotel-bar-rate">
-						<span class="hotel-rate">
-							4.8分
-							<p class='mui-ellipsis hotel-rate-in-1'>
-								95%推荐
-							</p>
-						</span>
-						<span class="hotel-rate-type">
-							<div id="demo1" class="mui-progressbar">
-								<span></span>
-							</div>
-						</span>
-						
-					</div>
-				</div>
-				<div id="item2mobile" class="mui-slider-item mui-control-content">
-					<ul class="mui-table-view">
-						<li class="mui-table-view-cell">第2个选项卡子项</li>
-						<li class="mui-table-view-cell">第2个选项卡子项</li>
-					</ul>
-				</div>
-				<div id="item3mobile" class="mui-slider-item mui-control-content">
-					<ul class="mui-table-view">
-						<li class="mui-table-view-cell">第3个选项卡子项</li>
-						<li class="mui-table-view-cell">第3个选项卡子项</li>
-					</ul>
-				</div>
+			<div class="hotel-bar-rate">
+				
+				<span class="hotel-rate-type">
+					
+					<span class="hotel-rate-type-environment"> 
+						环境
+						<div class="mui-progressbar" data-progress="70">
+							<span></span>
+						</div>
+					</span>
+					<span class="hotel-rate-type-service"> 
+						服务
+						<div class="mui-progressbar" data-progress="80">
+							<span></span>
+						</div>
+					</span>
+					<span class="hotel-rate-type-facilities"> 
+						设施
+						<div class="mui-progressbar" data-progress="70">
+							<span></span>
+						</div>
+					</span>
+					<span class="hotel-rate-type-hygiene"> 
+						卫生
+						<div class="mui-progressbar" data-progress="80">
+							<span></span>
+						</div>
+					</span>
+				</span>
+				<span class="hotel-rate-deail">
+					4.8分
+					<p class="mui-ellipsis" style="font-size: 12px;">
+					95%推荐
+					</p>
+				</span>
+				
 			</div>
 		</div>
 		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			mui.init({
-				swipeBack: false
+			mui(".mui-progressbar").each(function () {
+				mui(this).progressbar({progress:this.getAttribute("data-progress")}).show();
 			});
-			(function($) {
-				var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
-				$('.mui-input-group').on('change', 'input', function() {
-					if(this.checked) {
-						sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
-						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
-					}
-				});
-			})(mui);
-			mui("#demo1").progressbar({progress:80}).show();
 		</script>
 	</body>
 
