@@ -7,7 +7,7 @@
 }
 
 .hotel-commnet .mui-segmented-control .mui-control-item {
-	color: #099FDE;
+	color: #8f8f94;
 	border-left: none;
 }
 
@@ -31,7 +31,6 @@
 	position: relative;
 	float: left;
 	border-right: 1px solid #ddd;
-	width: 60px;
 	height: 60px;
 	text-align: center;
 	padding-top: 8px;
@@ -50,7 +49,6 @@
 .hotel-rate-type-service {
 	padding: 8px 0 0 8px;
 	display: inline-block;
-	width: 150px;
 	float: left;
 	font-size: 12px;
 	
