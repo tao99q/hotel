@@ -1,6 +1,9 @@
 .hotel-info{
 	position: relative;
 }
+.hotel-info .mui-table-view:first-child{
+	margin-top:0;
+}
 .hotel-info .mui-segmented-control {
 	border: none;
 }
