@@ -71,47 +71,47 @@
 			</div>
 			<div class="mui-row hotel-evaluate-type">
 		        <div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 4px;padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li hotel-evaluate-type-active">
 		           		商务出差 999+    
 		            </li>
 		        </div>
 		       	<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 4px;padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li">
 		           		情侣出游 290
 		            </li>
 		        </div>
 		        <div class="mui-col-sm-4 mui-col-xs-4" style="padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li">
 		           		家庭亲子 767
 		            </li>
 		        </div>
 				<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 4px;padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li">
 		           		商务出差 999+    
 		            </li>
 		        </div>
 		       	<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 4px;padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li">
 		           		情侣出游 290
 		            </li>
 		        </div>
 		        <div class="mui-col-sm-4 mui-col-xs-4" style="padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li">
 		           		家庭亲子 767
 		            </li>
 		        </div>
 		        <div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 4px;padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li">
 		           		商务出差 999+    
 		            </li>
 		        </div>
 		       	<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 4px;padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li">
 		           		情侣出游 290
 		            </li>
 		        </div>
 		        <div class="mui-col-sm-4 mui-col-xs-4" style="padding-top: 4px;">
-		            <li class="mui-table-view-cell">
+		            <li class="mui-table-view-cell hotel-evaluate-type-li">
 		           		家庭亲子 767
 		            </li>
 		        </div>
@@ -126,6 +126,15 @@
 						环境很好，房间很好，温泉池又多又舒适，还有水上乐园设施，孩子玩得很高兴，老少咸宜，很适合一家大小度假，早上开车去先去白水寨爬山，中午农家菜，晚上泡温泉，附近还有果园，玩得不亦乐乎！
 					</p>
 		        </div>
+		        <div class="mui-col-sm-12 mui-col-xs-12 hotel-evaluate-comment">
+					<span class="hotel-evaluate-score">
+						4.2
+					</span>分
+					<span class="evaluate-user">来自"朱小姐"</span>
+					<p style="font-size: 12px;color: #777;padding-top: 2px;">
+						环境很好，房间很好，温泉池又多又舒适，还有水上乐园设施，孩子玩得很高兴，老少咸宜，很适合一家大小度假，早上开车去先去白水寨爬山，中午农家菜，晚上泡温泉，附近还有果园，玩得不亦乐乎！
+					</p>
+		        </div>
 			</div>
 		</div>
 		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
@@ -133,6 +142,12 @@
 			mui(".mui-progressbar").each(function () {
 				mui(this).progressbar({progress:this.getAttribute("data-progress")}).show();
 			});
+			mui(".hotel-evaluate-type").on("tap",".mui-table-view-cell",function(){
+				mui(".hotel-evaluate-type li").each(function (){
+					this.className = "mui-table-view-cell hotel-evaluate-type-li";
+				})
+				this.className = "mui-table-view-cell hotel-evaluate-type-li hotel-evaluate-type-active";
+		   });
 		</script>
 	</body>
 

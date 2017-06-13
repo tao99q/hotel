@@ -1,0 +1,25 @@
+.hotel-info{
+	position: relative;
+}
+.hotel-info .mui-segmented-control {
+	border: none;
+}
+
+.hotel-info .mui-segmented-control .mui-control-item {
+	color: #8f8f94;
+	border-left: none;
+}
+
+.hotel-info .mui-segmented-control .mui-control-item.mui-active {
+	background-color: #efeff4;
+	color: #099FDE;
+	border-bottom: 2px solid #099FDE;
+}
+.hotel-info-comment{
+	background-color:white;
+	font-size: 12px;
+}
+.hotel-info-comment .mui-scroll{
+	background-color:white;
+	padding: 8px;
+}
